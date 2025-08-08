@@ -19,7 +19,15 @@ const server = http.createServer((req, res) => {
         <head><title>Medusa on Railway</title></head>
         <body>
           <h1>🎉 Medusa Successfully Deployed to Railway!</h1>
-          <p>The basic deployment is working. Next step is to configure the full Medusa application.</p>
+          <p>The server is running! Medusa setup is ready for the next phase.</p>
+          <p><strong>Next Steps:</strong></p>
+          <ul>
+            <li>✅ Server deployed and running</li>
+            <li>✅ PostgreSQL database connected</li>
+            <li>⏳ Install Medusa packages (pending)</li>
+            <li>⏳ Run database migrations</li>
+            <li>⏳ Enable admin dashboard</li>
+          </ul>
           <p>Health check endpoint: <a href="/health">/health</a></p>
           <p>Environment Variables Detected:</p>
           <ul>
