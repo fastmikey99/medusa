@@ -1,0 +1,80 @@
+{
+  "store": {
+    "name": "Medusa Store",
+    "default_currency_code": "usd",
+    "currencies": ["usd", "eur"],
+    "swap_link_template": "http://localhost:8000/swap/{cart_id}",
+    "payment_link_template": "http://localhost:8000/payment/{cart_id}",
+    "invite_link_template": "http://localhost:8000/invite/{invite_token}",
+    "default_sales_channel": "Default Sales Channel"
+  },
+  "users": [
+    {
+      "email": "admin@medusa-test.com",
+      "password": "supersecret",
+      "first_name": "Admin",
+      "last_name": "User",
+      "role": "admin"
+    }
+  ],
+  "regions": [
+    {
+      "name": "NA",
+      "currency_code": "usd",
+      "tax_rate": 0,
+      "payment_providers": ["manual"],
+      "fulfillment_providers": ["manual"],
+      "countries": ["us", "ca"]
+    },
+    {
+      "name": "EU",
+      "currency_code": "eur",
+      "tax_rate": 0,
+      "payment_providers": ["manual"],
+      "fulfillment_providers": ["manual"],
+      "countries": ["de", "fr", "es", "it", "gb"]
+    }
+  ],
+  "shipping_options": [
+    {
+      "name": "Standard Shipping",
+      "region_id": "NA",
+      "profile_id": "default_profile",
+      "data": {
+        "id": "standard"
+      },
+      "price_type": "flat_rate",
+      "amount": 1000
+    },
+    {
+      "name": "Express Shipping",
+      "region_id": "NA",
+      "profile_id": "default_profile",
+      "data": {
+        "id": "express"
+      },
+      "price_type": "flat_rate",
+      "amount": 2500
+    },
+    {
+      "name": "Standard Shipping",
+      "region_id": "EU",
+      "profile_id": "default_profile",
+      "data": {
+        "id": "standard"
+      },
+      "price_type": "flat_rate",
+      "amount": 1000
+    },
+    {
+      "name": "Express Shipping",
+      "region_id": "EU",
+      "profile_id": "default_profile",
+      "data": {
+        "id": "express"
+      },
+      "price_type": "flat_rate",
+      "amount": 2500
+    }
+  ]
+}

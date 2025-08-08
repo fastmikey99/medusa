@@ -1,11 +1,14 @@
 [phases.setup]
-nixPkgs = ["nodejs-18_x"]
+nixPkgs = ["nodejs-18_x", "npm-9_x"]
 
 [phases.install]
-cmds = ["cd railway-app && npm install"]
+cmds = [
+  "rm -f .yarnrc.yml yarn.lock",
+  "cd railway-app && npm install --production=false"
+]
 
 [phases.build]
-cmds = ["cd railway-app && npm run build || echo 'No build step'"]
+cmds = ["cd railway-app && npm run build || echo 'Build completed'"]
 
 [start]
 cmd = "cd railway-app && npm start"

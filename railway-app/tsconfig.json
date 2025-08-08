@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "lib": ["es2020"],
+    "target": "es2020",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "strict": false,
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": false,
+    "baseUrl": ".",
+    "paths": {
+      "@models": ["./src/models"],
+      "@services": ["./src/services"],
+      "@subscribers": ["./src/subscribers"],
+      "@repositories": ["./src/repositories"],
+      "@types": ["./src/types"],
+      "@utils": ["./src/utils"],
+      "@interfaces": ["./src/interfaces"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "dist",
+    "build",
+    ".cache",
+    "node_modules",
+    "**/*.spec.ts",
+    "**/*.spec.js"
+  ]
+}
