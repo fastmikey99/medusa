@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Medusa Backend",
   "scripts": {
-    "start": "./railway-start.sh",
-    "build": "./railway-build.sh",
-    "install": "echo 'Skipping root install'"
+    "start": "node server.js",
+    "build": "echo 'Build complete'",
+    "install": "echo 'Using simple deployment'"
   },
   "engines": {
     "node": ">=18.0.0"
