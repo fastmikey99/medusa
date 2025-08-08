@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
     </head>
     <body>
       <h1>🎉 Medusa Successfully Deployed!</h1>
-      <p class="status">Server Running</p>
+      <p class="status">Server Running - v2</p>
       <h2>Deployment Status:</h2>
       <ul>
         <li>✅ Basic server deployed</li>
