@@ -1,0 +1,24 @@
+{
+  "name": "medusa-backend",
+  "version": "1.0.0",
+  "description": "Medusa backend application",
+  "main": "index.js",
+  "scripts": {
+    "start": "medusa start",
+    "dev": "medusa develop",
+    "build": "medusa build",
+    "seed": "medusa seed -f ./data/seed.json",
+    "migrations:run": "medusa migrations run",
+    "migrations:generate": "medusa migrations generate"
+  },
+  "dependencies": {
+    "@medusajs/admin": "latest",
+    "@medusajs/cache-redis": "latest",
+    "@medusajs/event-bus-redis": "latest",
+    "@medusajs/medusa": "latest",
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

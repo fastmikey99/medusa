@@ -1,0 +1,19 @@
+{
+  "name": "medusa-backend",
+  "version": "1.0.0",
+  "description": "A Medusa backend",
+  "scripts": {
+    "start": "medusa start",
+    "dev": "medusa develop",
+    "build": "medusa build",
+    "migrations:run": "medusa migrations run"
+  },
+  "dependencies": {
+    "@medusajs/medusa": "^2.0.0",
+    "@medusajs/admin": "^2.0.0",
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

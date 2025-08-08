@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["nodejs-18_x"]
+
+[phases.install]
+cmds = ["cd railway-app && npm install"]
+
+[phases.build]
+cmds = ["cd railway-app && npm run build || echo 'No build step'"]
+
+[start]
+cmd = "cd railway-app && npm start"
