@@ -1,0 +1,20 @@
+# Nixpacks configuration for Railway deployment
+# This explicitly controls the build process to avoid yarn
+
+[phases.setup]
+nixPkgs = ["nodejs-18_x"]
+
+[phases.install]
+# Delete any yarn-related files first to prevent yarn from being used
+cmds = [
+    "rm -f yarn.lock .yarnrc.yml",
+    "rm -rf .yarn",
+    "cd app && npm install --production"
+]
+
+[phases.build]
+# No build step needed for simple Express server
+cmds = ["echo 'Build complete'"]
+
+[start]
+cmd = "cd app && node server.js"

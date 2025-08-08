@@ -4,10 +4,12 @@
   "description": "Railway deployment wrapper",
   "scripts": {
     "start": "cd app && node server.js",
-    "build": "./build.sh",
-    "postinstall": "cd app && npm install"
+    "build": "echo 'Using npm build' && cd app && npm ci --production",
+    "postinstall": "echo 'Skipping postinstall'"
   },
   "engines": {
-    "node": ">=18.0.0"
-  }
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "packageManager": "npm@9.0.0"
 }

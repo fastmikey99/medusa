@@ -1,0 +1,23 @@
+{
+  "build": {
+    "builder": "NIXPACKS",
+    "nixpacksPlan": {
+      "providers": ["node"],
+      "phases": {
+        "setup": {
+          "nixPkgs": ["nodejs-18_x"]
+        },
+        "install": {
+          "cmds": [
+            "rm -f yarn.lock .yarnrc.yml",
+            "rm -rf .yarn",
+            "cd app && npm ci --production"
+          ]
+        }
+      }
+    }
+  },
+  "deploy": {
+    "startCommand": "cd app && node server.js"
+  }
+}
