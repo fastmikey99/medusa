@@ -1,0 +1,66 @@
+{
+  "store": {
+    "name": "Medusa Store",
+    "default_currency_code": "usd",
+    "currencies": ["usd", "eur", "gbp", "nzd", "aud"]
+  },
+  "users": [
+    {
+      "email": "admin@medusa.com",
+      "password": "supersecret",
+      "role": "admin"
+    }
+  ],
+  "regions": [
+    {
+      "name": "North America",
+      "currency_code": "usd",
+      "tax_rate": 0,
+      "payment_providers": ["manual"],
+      "fulfillment_providers": ["manual"],
+      "countries": ["us", "ca"]
+    },
+    {
+      "name": "Europe",
+      "currency_code": "eur",
+      "tax_rate": 0,
+      "payment_providers": ["manual"],
+      "fulfillment_providers": ["manual"],
+      "countries": ["gb", "de", "fr", "es", "it"]
+    },
+    {
+      "name": "New Zealand",
+      "currency_code": "nzd",
+      "tax_rate": 15,
+      "payment_providers": ["manual"],
+      "fulfillment_providers": ["manual"],
+      "countries": ["nz"]
+    },
+    {
+      "name": "Australia",
+      "currency_code": "aud",
+      "tax_rate": 10,
+      "payment_providers": ["manual"],
+      "fulfillment_providers": ["manual"],
+      "countries": ["au"]
+    }
+  ],
+  "shipping_options": [
+    {
+      "name": "Standard Shipping",
+      "region_id": "reg_north_america",
+      "provider_id": "manual",
+      "data": {},
+      "price_type": "flat_rate",
+      "amount": 1000
+    },
+    {
+      "name": "Express Shipping",
+      "region_id": "reg_north_america",
+      "provider_id": "manual",
+      "data": {},
+      "price_type": "flat_rate",
+      "amount": 2500
+    }
+  ]
+}
