@@ -4,10 +4,8 @@
   "description": "Medusa Backend",
   "scripts": {
     "start": "cd railway-app && npm start",
-    "build": "./deploy.sh",
-    "railway:install": "cd railway-app && npm install --production=false",
-    "railway:build": "cd railway-app && npm run build",
-    "railway:start": "cd railway-app && npm start"
+    "build": "cd railway-app && npm install",
+    "install": "echo 'Skipping root install'"
   },
   "engines": {
     "node": ">=18.0.0"
