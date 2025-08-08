@@ -1,0 +1,8 @@
+# Ignore everything except what we need for the simple deployment
+*
+!package.json
+!server.js
+!railway.json
+!nixpacks.toml
+!railway-deploy.sh
+!Dockerfile.railway

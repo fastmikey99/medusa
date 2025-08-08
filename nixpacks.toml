@@ -2,13 +2,10 @@
 nixPkgs = ["nodejs-18_x", "npm-9_x"]
 
 [phases.install]
-cmds = [
-  "rm -f .yarnrc.yml yarn.lock",
-  "cd railway-app && npm install --production=false"
-]
+cmds = ["npm install --production || true"]
 
 [phases.build]
-cmds = ["cd railway-app && npm run build || echo 'Build completed'"]
+cmds = ["chmod +x railway-deploy.sh"]
 
 [start]
-cmd = "cd railway-app && npm start"
+cmd = "sh railway-deploy.sh"

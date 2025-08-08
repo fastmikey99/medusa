@@ -1,0 +1,17 @@
+# Simple Dockerfile for Railway deployment
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copy only what we need for the simple server
+COPY package.json ./
+COPY server.js ./
+
+# Install dependencies (if any)
+RUN npm install --production || echo "No dependencies to install"
+
+# Expose the port Railway will use
+EXPOSE ${PORT:-9000}
+
+# Start the server directly
+CMD ["node", "server.js"]
