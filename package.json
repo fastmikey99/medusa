@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Medusa Backend",
   "scripts": {
-    "start": "cd railway-app && npm start",
-    "build": "cd railway-app && npm install",
+    "start": "./railway-start.sh",
+    "build": "./railway-build.sh",
     "install": "echo 'Skipping root install'"
   },
   "engines": {
